@@ -36,12 +36,12 @@ html, body, #root {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
+    overflow-x: hidden;
 }
 
 #display .formula {
     color: #ffa500;
-    overflow: hidden;
-    word-wrap: break-word;
+    width: 100%;
     overflow-wrap: break-word;
     text-align: right;
 }
