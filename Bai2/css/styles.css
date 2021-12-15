@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Share Tech Mono", "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+html, body, #root {
+    min-height: 100%;
+    height: 100%;
+}
+
+#root {
+    background: linear-gradient(
+        120deg, rgba(255, 0, 230, 0.97), rgb(51, 136, 255));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculator {
+    width: 320px;
+    color: #fff;
+    border: 8px solid #454146;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #242424;
+}
+
+#display {
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#display .formula {
+    color: #ffa500;
+    overflow: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: right;
+}
+
+#display .current {
+    font-size: 24px;
+    min-height: 32px;
+    line-height: 32px;
+}
+
+#pads {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 60px);
+    justify-content: center;
+}
+
+#pads .num-0,
+#pads .equal {
+    grid-column: span 2;
+}
+
+#pads > * {
+    cursor: pointer;
+    text-align: center;
+    line-height: 60px;
+}
+
+#pads > *:hover {
+    opacity: 0.9;
+}
+
+#pads .AC,
+#pads .DEL {
+    background-color: #ac3939;
+}
+
+#pads .equal {
+    background-color: #046;
+}
+
+#pads .num {
+    background-color: #4d4d4d;
+}
+
+#pads .operator {
+    background-color: #666;
+}
