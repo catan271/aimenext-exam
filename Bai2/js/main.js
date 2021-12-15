@@ -30,7 +30,7 @@ numbers.forEach((number) => {
 operators.forEach((operator) => {
     operator.onclick = () => {
         if (calculated) {
-            formula.textContent = formula.textContent.match(/[\d.]*$/)[0] + operator.textContent
+            formula.textContent = (formula.textContent.match(/(?<==)[e0-9\-+.]*$/)[0] || '') + operator.textContent
             current.textContent = '0'
             calculated = false
             return
